@@ -11,7 +11,7 @@ class LspVtslsExecuteCommand(LspExecuteCommand):
     session_name = SESSION_NAME
 
 
-class LspTypescriptGotoSourceDefinitionCommand(LspVtslsExecuteCommand):
+class LspVtslsGotoSourceDefinitionCommand(LspVtslsExecuteCommand):
     def handle_success_async(self, result: Union[List[Location], List[LocationLink]], command_name: str) -> None:
         window = self.view.window()
         if not result:
